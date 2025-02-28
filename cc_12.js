@@ -43,3 +43,38 @@ metricCardsArray.forEach((card) => {
     }
     card.style.backgroundColor = `#CBC3E3`
 })
+
+
+
+
+
+// Task 3 -Implemented Dynamic Inventory List
+
+// Making a function to add a product to the list.
+
+function addproduct() {
+    const inventorylist = document.getElementById("inventorylist")
+
+const newproductitem = document.createElement("li")
+
+newproductitem.setAttribute("class", "product-item")
+newproductitem.setAttribute("data-product", "New Product")
+
+newproductitem.textContent = "Phone"
+
+inventorylist.appendChild(newproductitem)
+
+// Making an event that removes the product when clicked on.
+
+newproductitem.addEventListener("click", removeproduct)
+
+}
+
+// Making the function that removes the product from the list.
+
+function removeproduct(event) {
+    const itemremove = event.target
+    const inventorylist = document.getElementById("inventorylist")
+
+    inventorylist.removeChild(itemremove)
+}
