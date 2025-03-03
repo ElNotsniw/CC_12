@@ -28,19 +28,52 @@
             cursor: pointer;
         }
 
-        .product-item:hover {
-            background-color: #ddd;
+        .customer-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            width: 200px;
+            text-align: center;
+        }
+
+        #customersection {
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
+<h1>JavaScript Coding Challenge #12</h1>
+
+    <!-- Task 1 - Business Dashboard -->
+
+    <!-- Create the dashboard and the dashboard container to include Revenue and assign it a value. -->
+
     <div id="dashboard" class="dashboard-container"></div>
     <script src="cc_12.js"></script>
 
+
+    <!-- Task 3 - Dynamic Inventory Management -->
+
+    <!-- Creating an unordered list to then put make it have a button, which dynamically adds product whenever prompted -->
+
     <h1>Inventory List</h1>
-
     <button onclick="addproduct()">Add Product</button>
-
     <ul id="inventorylist"></ul>
+
+
+    <!-- Task 4 - Business Customer Section -->
+
+    <!-- Creating a parent container and 3 child elements -->
+     
+    <h1>Customer Section</h1>
+    <div id="customersection">
+        <div class="customer-card" id="customer1">Customer 1</div>
+        <div class="customer-card" id="customer2">Customer 2</div>
+        <div class="customer-card" id="customer3">Customer 3</div>
+    </div>
 </body>
 </html>

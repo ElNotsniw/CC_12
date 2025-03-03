@@ -78,3 +78,28 @@ function removeproduct(event) {
 
     inventorylist.removeChild(itemremove)
 }
+
+
+
+
+// Task 4 - Demonstrated Event Bubbling in Customer Section
+
+// Creating a callback function to where if the customer section container is clicked, it console-logs that it was clicked.
+
+const customersection = document.getElementById("customersection");
+    document.addEventListener("click", () => {
+        console.log("Customer section clicked");
+    });
+
+
+// Creating a callback function to where if any of the customer section boxes are clicked, it console-logs that the boxes were clicked.
+
+const customercards = document.querySelectorAll(".customer-card");
+
+customercards.forEach(card => {
+    card.addEventListener("click", (event) => {
+        console.log("Customer card clicked");
+
+         event.stopPropagation()
+    });
+});
